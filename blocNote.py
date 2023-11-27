@@ -85,20 +85,11 @@ class BlocNotes:
                 print(f"ID : {note.id}")
                 print(f"Titre : {note.title}")
                 print(f"Contenu : {note.content}")
-                if isinstance(note, NoteText):
-                    print(f"Type : Texte")
-                elif isinstance(note, NoteImage):
-                    print(f"Type : Image")
-                    print(f"Image : {note.image}")
-                    if isinstance(note, NoteImagePNG):
-                        print(f"Format : {note.format}")
-                    elif isinstance(note, NoteImageJPG):
-                        print(f"Format : {note.format}")
+                if isinstance(note, NoteImage):
+                    print(f"Format : {note.get_format()}")
                 elif isinstance(note, NoteAudio):
-                    print(f"Type : Audio")
                     print(f"Audio : {note.audio}")
                 elif isinstance(note, NoteVideo):
-                    print(f"Type : Vidéo")
                     print(f"Vidéo : {note.video}")
                 print()
                 break
