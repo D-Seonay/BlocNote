@@ -30,7 +30,6 @@ class NoteImageJPG(NoteImage):
     def __init__(self, id, title, content, image, format):
         super().__init__(id, title, content, image, format)
 
-
 class NoteAudio(Note):
     def __init__(self, id, title, content, audio):
         super().__init__(id, title, content)
